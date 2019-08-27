@@ -32,6 +32,7 @@ p1.addEventListener("click", function(){
   // var result = p1Score + " to " + p2Score;
   if(p1Score === defaultVal){
     gameOver = true;
+    p1Disp.classList.add("winnerDisp");
   }
 }
   // h1.innerHTML = updateScore();
@@ -44,6 +45,7 @@ p2.addEventListener("click", function(){
   p2Score += 1;
   if(p2Score === defaultVal){
     gameOver = true;
+    p2Disp.classList.add("winnerDisp");
   }
 }
   // h1.innerHTML = updateScore();
@@ -64,5 +66,7 @@ reset.addEventListener("click", function(){
     // h1.innerHTML = updateScore();
     p1Disp.innerHTML = p1Score;
     p2Disp.innerHTML = p2Score;
+    p1Disp.classList.remove("winnerDisp");
+    p2Disp.classList.remove("winnerDisp");
     gameOver = false;
 });
